@@ -453,6 +453,28 @@
   .project-link:hover { color: var(--accent); }
   .project-link svg { width: 12px; height: 12px; }
 
+  .project-media {
+    width: 100%;
+     height: 180px;
+     border-radius: 8px;
+     overflow: hidden;
+     margin-bottom: 1rem;
+     border: 1px solid var(--border);
+     position: relative;
+}
+.project-media img,
+.project-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-media iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
   /* CONTACT */
   #contact { background: var(--bg); }
 
@@ -686,9 +708,6 @@
           <span class="skill-tag">HTML5</span>
           <span class="skill-tag">CSS3</span>
           <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Tailwind CSS</span>
           <span class="skill-tag">Figma</span>
         </div>
       </div>
@@ -696,10 +715,10 @@
         <div class="skill-group-title">Backend</div>
         <div class="skill-tags">
           <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Express</span>
+          <span class="skill-tag">PHP</span>
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">GraphQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">C#</span>
           <span class="skill-tag">Java</span>
         </div>
       </div>
@@ -707,9 +726,6 @@
         <div class="skill-group-title">Database</div>
         <div class="skill-tags">
           <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Firebase</span>
           <span class="skill-tag">SQL</span>
         </div>
       </div>
@@ -719,9 +735,6 @@
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitHub</span>
           <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Vercel</span>
         </div>
       </div>
     </div>
@@ -733,80 +746,132 @@
   <div class="section-wrap">
     <p class="section-label reveal">// 03 — Projects</p>
     <h2 class="reveal">Things I've Built</h2>
+
     <div class="projects-grid">
 
+      <!-- PROJECT 1 -->
       <div class="project-card reveal">
         <div class="project-num">PROJECT_01</div>
-        <div class="project-title">Task Management App</div>
-        <p class="project-desc">A full-stack to-do and project tracker with user authentication, drag-and-drop kanban boards, and real-time updates.</p>
-        <div class="project-tech">
-          <span>React</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span>
-        </div>
-        <div class="project-links">
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            GitHub
+
+        <div class="project-media">
+           <a href="https://youtu.be/M_e_khrgw_w" target="_blank">
+            <img src="project1.png" alt="Project Video">
           </a>
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
+        </div>
+
+        <div class="project-title">Photo Editor (C#)</div>
+
+        <p class="project-desc">
+          A desktop photo editor built using C# featuring filters, brightness/contrast adjustment,
+          RGB color control, grayscale, and binary image processing.
+        </p>
+
+        <div class="project-tech">
+          <span>C#</span>
+          <span>Windows Forms</span>
+          <span>Image Processing</span>
+        </div>
+
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/yourusername/photo-editor" target="_blank">
+            GitHub
           </a>
         </div>
       </div>
 
+      <!-- PROJECT 2 -->
       <div class="project-card reveal">
         <div class="project-num">PROJECT_02</div>
-        <div class="project-title">E-Commerce Platform</div>
-        <p class="project-desc">A responsive online store with product catalog, cart management, user authentication, and Stripe payment integration.</p>
-        <div class="project-tech">
-          <span>React</span><span>Express</span><span>PostgreSQL</span><span>Stripe</span>
+
+        <div class="project-media">
+          <video muted loop preload="none"
+            onmouseover="this.play()"
+            onmouseout="this.pause(); this.currentTime=0;">
+            <source src="project2.mp4" type="video/mp4">
+          </video>
         </div>
+
+        <div class="project-title">Price List Checker</div>
+
+        <p class="project-desc">
+          A Python-based application that scans and compares product prices using image processing,
+          helping automate price verification efficiently.
+        </p>
+
+        <div class="project-tech">
+          <span>Python</span>
+          <span>OpenCV</span>
+        </div>
+
         <div class="project-links">
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <a class="project-link" href="https://github.com/yourusername/price-checker" target="_blank">
             GitHub
-          </a>
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
           </a>
         </div>
       </div>
 
+      <!-- PROJECT 3 -->
       <div class="project-card reveal">
         <div class="project-num">PROJECT_03</div>
-        <div class="project-title">Student Portal System</div>
-        <p class="project-desc">A web-based student information system for grade tracking, course enrollment, and schedule management built for the university.</p>
-        <div class="project-tech">
-          <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+
+        <div class="project-media">
+          <video muted loop preload="none"
+            onmouseover="this.play()"
+            onmouseout="this.pause(); this.currentTime=0;">
+            <source src="project3.mp4" type="video/mp4">
+          </video>
         </div>
+
+        <div class="project-title">Louie’s Adventure Game</div>
+
+        <p class="project-desc">
+          A browser-based platform game built with HTML, CSS, and JavaScript featuring multiple levels,
+          animations, and interactive gameplay mechanics.
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
         <div class="project-links">
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <a class="project-link" href="https://github.com/yourusername/mario-game" target="_blank">
             GitHub
-          </a>
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
           </a>
         </div>
       </div>
 
+      <!-- PROJECT 4 -->
       <div class="project-card reveal">
         <div class="project-num">PROJECT_04</div>
-        <div class="project-title">Weather Dashboard</div>
-        <p class="project-desc">A clean weather app with geolocation, 7-day forecasts, animated weather icons, and location search powered by OpenWeather API.</p>
-        <div class="project-tech">
-          <span>JavaScript</span><span>OpenWeather API</span><span>CSS3</span>
+
+        <div class="project-media">
+          <video muted loop preload="none"
+            onmouseover="this.play()"
+            onmouseout="this.pause(); this.currentTime=0;">
+            <source src="project4.mp4" type="video/mp4">
+          </video>
         </div>
+
+        <div class="project-title">Furniture POS System</div>
+
+        <p class="project-desc">
+          A web-based POS system for a furniture shop with product listing, cart functionality,
+          quantity selection, and total price calculation.
+        </p>
+
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+        </div>
+
         <div class="project-links">
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <a class="project-link" href="https://github.com/yourusername/pos-system" target="_blank">
             GitHub
-          </a>
-          <a class="project-link" href="#" onclick="return false;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
           </a>
         </div>
       </div>
