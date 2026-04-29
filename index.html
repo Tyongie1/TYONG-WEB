@@ -474,6 +474,17 @@
   border: none;
   display: block;
 }
+ /* NEW: wrapper to stack image on top of video */
+.media-hover-wrap { position: relative; width: 100%; height: 100%; }
+
+/* NEW: image sits on top (z-index 2), fades out on hover */
+.media-hover-wrap .media-thumb { position: absolute; inset: 0; z-index: 2; transition: opacity 0.3s ease; }
+
+/* NEW: video sits underneath (z-index 1), always playing */
+.media-hover-wrap .media-preview { position: absolute; inset: 0; z-index: 1; }
+
+/* NEW: this is the only "effect" — just fades the image away */
+.project-media:hover .media-thumb { opacity: 0; }
 
   /* CONTACT */
   #contact { background: var(--bg); }
@@ -754,9 +765,10 @@
         <div class="project-num">PROJECT_01</div>
 
         <div class="project-media">
-           <a href="https://youtu.be/M_e_khrgw_w" target="_blank">
-            <img src="project1.png" alt="Project Video">
-          </a>
+           <div class="media-hover-wrap">
+            <img class="media-thumb" src="project1.png" alt="...">
+            <video class="media-preview" src="preview1.mp4" muted loop playsinline autoplay></video>
+          </div>
         </div>
 
         <div class="project-title">Photo Editor (C#)</div>
@@ -784,10 +796,12 @@
         <div class="project-num">PROJECT_02</div>
 
         <div class="project-media">
-          <a href="https://youtu.be/FGkT0aLeukw" target="_blank">
-            <img src="project2.png" alt="Project Video">
-          </a>
+          <div class="media-hover-wrap">
+            <img class="media-thumb" src="project2.png" alt="...">
+            <video class="media-preview" src="preview2.mp4" muted loop playsinline autoplay></video>
+          </div>
         </div>
+
 
         <div class="project-title">Price List Checker</div>
 
@@ -845,10 +859,12 @@
         <div class="project-num">PROJECT_04</div>
 
         <div class="project-media">
-          <a href="https://youtu.be/BIX9iczJdsM" target="_blank">
-            <img src="project4.png" alt="Project Video">
-          </a>
+          <div class="media-hover-wrap">
+            <img class="media-thumb" src="project4.png" alt="...">
+            <video class="media-preview" src="preview3.mp4" muted loop playsinline autoplay></video>
+          </div>
         </div>
+
 
         <div class="project-title">Furniture POS System</div>
 
